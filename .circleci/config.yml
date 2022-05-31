@@ -31,7 +31,7 @@ jobs:
       #     command: powershell -ExecutionPolicy RemoteSigned c:/project/cmd/SharPointSDK_Installer.ps1
 
       - run:
-          name: "zip compress."
+          name: "zip compress & dir."
           shell: powershell.exe
           command: |
             compress-archive -Path c:/project/main.exe -DestinationPath c:/project/main.zip

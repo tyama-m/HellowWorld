@@ -20,6 +20,11 @@ jobs:
     steps:
       - checkout
 
+       - run:
+           name: "time test."
+           shell: powershell.exe
+           command: dir c:/project
+
       # - run:
       #     name: "go build."
       #     shell: powershell.exe
@@ -30,12 +35,12 @@ jobs:
       #     shell: powershell.exe
       #     command: powershell -ExecutionPolicy RemoteSigned c:/project/cmd/SharPointSDK_Installer.ps1
 
-      - run:
-          name: "zip compress & dir."
-          shell: powershell.exe
-          command: |
-            compress-archive -Path c:/project/main.exe -DestinationPath c:/project/main.zip
-            dir c:/project/main.zip
+      #- run:
+          #name: "zip compress & dir."
+          #shell: powershell.exe
+          #command: |
+            #compress-archive -Path c:/project/main.exe -DestinationPath c:/project/main.zip
+            #dir c:/project/main.zip
 
       # - run:
       #     name: "Deploy Binary."
